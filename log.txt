@@ -1,0 +1,1 @@
+ERROR:__main__: 2023-04-29 19:05:43.828869 - There was an HTTP error - 404 Client Error: Not Found for url: https://api.sheety.co/4a0d5dfd46da33d6c8aefcfae9f03882/fDeals/price

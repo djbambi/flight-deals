@@ -15,7 +15,7 @@ def get_data_from_spreadsheet(url):
         response = requests.get(url, timeout=5)
         response.raise_for_status()
     except requests.exceptions.Timeout as timeout_error:
-        print(f"The request timed out - {timeout_error}")
+        return f"The request timed out - {timeout_error}"
     except requests.exceptions.HTTPError as http_error:
         print(f"The request returned an HTTP error - {http_error}")
     except requests.exceptions.SSLError as ssl_error:

@@ -1,7 +1,16 @@
-# This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
-from spreadsheet_tools import get_data_from_spreadsheet, put_data_to_spreadsheet
-from new_data_manager import get_city_and_id_for_empty_iata
-from flight_api_tools import get_iata_code
+"""Main script for finding flight deals"""
+from utils.spreadsheet_tools import get_data_from_spreadsheet, put_data_to_spreadsheet
+from utils.new_data_manager import get_city_and_id_for_empty_iata
+from utils.flight_api_tools import get_iata_code
+import logging
+import datetime
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename="log.txt")
+logger.setLevel(logging.DEBUG)
+
+time_stamp = datetime.datetime.now()
+logger.error(f" {time_stamp} - There was an HTTP error - {http_error}")
 
 SHEETY_URL = "https://api.sheety.co/4a0d5dfd46da33d6c8aefcfae9f03882/fDeals/prices"
 PUT_URL = "https://api.sheety.co/4a0d5dfd46da33d6c8aefcfae9f03882/fDeals/prices/"
